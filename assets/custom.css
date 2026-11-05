@@ -1,0 +1,327 @@
+/* High-End Trading Terminal Theme for AI Stock Advisor */
+:root {
+  --bg-dark: #080c14;
+  --bg-card: #0f172a;
+  --bg-card-hover: #1e293b;
+  --border-subtle: #1e293b;
+  --border-focus: #3b82f6;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --emerald-glow: rgba(16, 185, 129, 0.25);
+  --rose-glow: rgba(244, 63, 94, 0.25);
+  --amber-glow: rgba(245, 158, 11, 0.25);
+}
+
+body,
+.gradio-container {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-main) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  max-width: 1480px !important;
+  margin: 0 auto !important;
+}
+
+/* Header Banner */
+.header-banner {
+  background: radial-gradient(circle at 10% 20%, #1e1b4b 0%, #0f172a 60%, #080c14 100%) !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 14px !important;
+  padding: 24px 30px !important;
+  margin-bottom: 22px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+.header-title {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  color: #ffffff !important;
+  margin: 0 0 6px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.header-subtitle {
+  font-size: 14px !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.header-pill {
+  padding: 5px 12px !important;
+  border-radius: 9999px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+}
+
+.pill-live {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+}
+
+.pill-ai {
+  background: rgba(59, 130, 246, 0.12) !important;
+  color: #60a5fa !important;
+  border: 1px solid rgba(96, 165, 250, 0.3) !important;
+}
+
+/* KPI Metric Cards */
+.metric-card {
+  background: linear-gradient(180deg, #111827 0%, #0f172a 100%) !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 12px !important;
+  padding: 16px 20px !important;
+  text-align: center !important;
+  transition: all 0.2s ease-in-out !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.metric-card:hover {
+  border-color: #334155 !important;
+  transform: translateY(-2px) !important;
+}
+
+.metric-title {
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  color: #64748b !important;
+  font-weight: 700 !important;
+  margin-bottom: 6px !important;
+}
+
+.metric-value {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  color: #f8fafc !important;
+}
+
+.metric-value.buy {
+  color: #10b981 !important;
+  text-shadow: 0 0 16px var(--emerald-glow) !important;
+}
+
+.metric-value.sell {
+  color: #f43f5e !important;
+  text-shadow: 0 0 16px var(--rose-glow) !important;
+}
+
+.metric-value.hold {
+  color: #f59e0b !important;
+  text-shadow: 0 0 16px var(--amber-glow) !important;
+}
+
+/* Quick Pick Pills */
+.quick-pick-container {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 12px !important;
+  align-items: center !important;
+}
+
+.quick-pick-label {
+  font-size: 12px !important;
+  color: #64748b !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  margin-right: 4px !important;
+}
+
+/* Gradio Component Enhancements */
+.gr-panel,
+.gr-box,
+div[class*="block"] {
+  border-color: #1e293b !important;
+  background-color: #0f172a !important;
+}
+
+/* Tabs Styling */
+button[role="tab"] {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  color: #94a3b8 !important;
+  border-bottom: 2px solid transparent !important;
+  padding: 10px 18px !important;
+  transition: all 0.2s ease !important;
+}
+
+button[role="tab"][aria-selected="true"] {
+  color: #38bdf8 !important;
+  border-bottom: 2px solid #38bdf8 !important;
+  background: rgba(56, 189, 248, 0.06) !important;
+  border-radius: 6px 6px 0 0 !important;
+}
+
+/* Buttons */
+button.primary-btn,
+.gr-button-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border: 1px solid #3b82f6 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.15s ease-in-out !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3) !important;
+}
+
+button.primary-btn:hover,
+.gr-button-primary:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45) !important;
+}
+
+button.success-btn {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
+  border: 1px solid #10b981 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Dataframe & Table */
+.dataframe-wrap {
+  border-radius: 10px !important;
+  border: 1px solid #1e293b !important;
+  overflow: hidden !important;
+}
+
+table.dataframe th {
+  background: #111827 !important;
+  color: #94a3b8 !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 12px 14px !important;
+  border-bottom: 2px solid #1e293b !important;
+}
+
+table.dataframe td {
+  padding: 10px 14px !important;
+  font-size: 13px !important;
+  color: #f1f5f9 !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+table.dataframe tr:hover td {
+  background: rgba(56, 189, 248, 0.05) !important;
+  cursor: pointer !important;
+}
+
+/* Terminal Status Box */
+.terminal-status {
+  background: #020617 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 8px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  color: #38bdf8 !important;
+  font-size: 12px !important;
+  padding: 12px 16px !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* TradingView Style Area Chart & Header Banner */
+.tv-header-card {
+  background: #080c14 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 12px !important;
+  padding: 16px 20px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.tv-logo-circle {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border: 1px solid #334155 !important;
+  color: #38bdf8 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+.tv-price-large {
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  color: #f8fafc !important;
+}
+
+.tv-change-badge {
+  padding: 4px 12px !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.02em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.tv-change-badge.pill-positive {
+  background: rgba(0, 192, 118, 0.15) !important;
+  color: #00c076 !important;
+  border: 1px solid rgba(0, 192, 118, 0.3) !important;
+}
+
+.tv-change-badge.pill-negative {
+  background: rgba(244, 63, 94, 0.15) !important;
+  color: #f43f5e !important;
+  border: 1px solid rgba(244, 63, 94, 0.3) !important;
+}
+
+.tv-stats-ribbon {
+  display: flex !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+  border-top: 1px solid #161f30 !important;
+  padding-top: 12px !important;
+  margin-top: 10px !important;
+}
+
+.tv-stat-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.tv-stat-lbl {
+  font-size: 11px !important;
+  color: #64748b !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-weight: 600 !important;
+}
+
+.tv-stat-val {
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  color: #cbd5e1 !important;
+}

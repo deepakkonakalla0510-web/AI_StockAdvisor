@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary SQLite journals
+*.sqlite-journal
+*.sqlite3-journal
+
+# Environment secrets (CRITICAL: never commit API keys)
+.env
+.env.local
+.env.*.local
+
+# Gradio cache & temporary export files
+flagged/
+.gradio/
+exports/
+
+# OS files
+.DS_Store
+Thumbs.db
