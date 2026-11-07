@@ -387,7 +387,7 @@ def save_settings_action(gemini_k, tavily_k, finnhub_k, twelvedata_k):
 # ---------------------------------------------------------
 
 theme = gr.themes.Soft(
-    primary_hue="blue",
+    primary_hue="purple",
     secondary_hue="slate",
     neutral_hue="slate"
 )

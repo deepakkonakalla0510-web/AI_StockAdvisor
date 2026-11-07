@@ -1,40 +1,57 @@
-/* High-End Trading Terminal Theme for AI Stock Advisor */
+/* Render-Inspired Production Dark Theme for AI Stock Advisor */
 :root {
-  --bg-dark: #080c14;
-  --bg-card: #0f172a;
-  --bg-card-hover: #1e293b;
-  --border-subtle: #1e293b;
-  --border-focus: #3b82f6;
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  --bg-deep: #06070a;
+  --bg-canvas: #090a10;
+  --bg-surface: #0d0f18;
+  --bg-surface-elevated: #121522;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(168, 85, 247, 0.4);
+  --border-active: #a855f7;
+  --text-main: #ffffff;
+  --text-sub: #94a3b8;
+  --text-muted: #64748b;
+  --accent-purple: #a855f7;
+  --accent-indigo: #6366f1;
+  --accent-emerald: #10b981;
+  --accent-rose: #f43f5e;
+  --accent-amber: #f59e0b;
+  --purple-glow: rgba(168, 85, 247, 0.25);
   --emerald-glow: rgba(16, 185, 129, 0.25);
   --rose-glow: rgba(244, 63, 94, 0.25);
-  --amber-glow: rgba(245, 158, 11, 0.25);
 }
 
+/* Global Canvas with Subtle Blueprint Grid & Aurora Glow */
 body,
 .gradio-container {
-  background-color: var(--bg-dark) !important;
+  background-color: var(--bg-deep) !important;
+  background-image: 
+    radial-gradient(ellipse at 50% 100%, rgba(99, 102, 241, 0.14) 0%, rgba(139, 92, 246, 0.06) 40%, transparent 75%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 32px 32px, 32px 32px !important;
+  background-attachment: fixed !important;
   color: var(--text-main) !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", Arial, sans-serif !important;
   max-width: 1480px !important;
   margin: 0 auto !important;
+  letter-spacing: -0.01em !important;
 }
 
-/* Header Banner */
+/* Header Banner - Sleek Render Radial Aura */
 .header-banner {
-  background: radial-gradient(circle at 10% 20%, #1e1b4b 0%, #0f172a 60%, #080c14 100%) !important;
-  border: 1px solid #1e293b !important;
+  background: radial-gradient(ellipse at 50% -20%, rgba(124, 58, 237, 0.35) 0%, rgba(30, 27, 75, 0.45) 45%, rgba(10, 11, 18, 0.95) 85%) !important;
+  border: 1px solid rgba(139, 92, 246, 0.25) !important;
   border-radius: 14px !important;
-  padding: 24px 30px !important;
+  padding: 24px 32px !important;
   margin-bottom: 22px !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+  box-shadow: 0 16px 40px -10px rgba(124, 58, 237, 0.25), 0 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px) !important;
 }
 
 .header-title {
-  font-size: 28px !important;
+  font-size: 30px !important;
   font-weight: 800 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.03em !important;
   color: #ffffff !important;
   margin: 0 0 6px 0 !important;
   display: flex !important;
@@ -44,52 +61,60 @@ body,
 
 .header-subtitle {
   font-size: 14px !important;
-  color: #94a3b8 !important;
+  color: var(--text-sub) !important;
   margin: 0 !important;
-  line-height: 1.5 !important;
+  line-height: 1.6 !important;
 }
 
+/* Badges / Status Pills (Render Pipeline Style) */
 .header-pill {
   padding: 5px 12px !important;
-  border-radius: 9999px !important;
+  border-radius: 6px !important;
   font-size: 12px !important;
   font-weight: 600 !important;
-  letter-spacing: 0.03em !important;
+  letter-spacing: 0.02em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
 }
 
 .pill-live {
   background: rgba(16, 185, 129, 0.12) !important;
   color: #34d399 !important;
-  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+  border: 1px solid rgba(52, 211, 153, 0.35) !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.15) !important;
 }
 
 .pill-ai {
-  background: rgba(59, 130, 246, 0.12) !important;
-  color: #60a5fa !important;
-  border: 1px solid rgba(96, 165, 250, 0.3) !important;
+  background: rgba(168, 85, 247, 0.15) !important;
+  color: #c084fc !important;
+  border: 1px solid rgba(192, 132, 252, 0.35) !important;
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.2) !important;
 }
 
-/* KPI Metric Cards */
+/* KPI Telemetry Cards */
 .metric-card {
-  background: linear-gradient(180deg, #111827 0%, #0f172a 100%) !important;
-  border: 1px solid #1e293b !important;
+  background: linear-gradient(180deg, rgba(18, 21, 34, 0.85) 0%, rgba(10, 12, 19, 0.95) 100%) !important;
+  border: 1px solid var(--border-subtle) !important;
   border-radius: 12px !important;
   padding: 16px 20px !important;
   text-align: center !important;
-  transition: all 0.2s ease-in-out !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
 }
 
 .metric-card:hover {
-  border-color: #334155 !important;
+  border-color: rgba(168, 85, 247, 0.4) !important;
   transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6), 0 0 20px rgba(168, 85, 247, 0.15) !important;
 }
 
 .metric-title {
   font-size: 11px !important;
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
-  color: #64748b !important;
+  color: #94a3b8 !important;
   font-weight: 700 !important;
   margin-bottom: 6px !important;
 }
@@ -98,11 +123,11 @@ body,
   font-size: 26px !important;
   font-weight: 800 !important;
   letter-spacing: -0.02em !important;
-  color: #f8fafc !important;
+  color: #ffffff !important;
 }
 
 .metric-value.buy {
-  color: #10b981 !important;
+  color: #34d399 !important;
   text-shadow: 0 0 16px var(--emerald-glow) !important;
 }
 
@@ -112,8 +137,8 @@ body,
 }
 
 .metric-value.hold {
-  color: #f59e0b !important;
-  text-shadow: 0 0 16px var(--amber-glow) !important;
+  color: #fbbf24 !important;
+  text-shadow: 0 0 16px rgba(251, 191, 36, 0.25) !important;
 }
 
 /* Quick Pick Pills */
@@ -127,9 +152,10 @@ body,
 
 .quick-pick-label {
   font-size: 12px !important;
-  color: #64748b !important;
+  color: #94a3b8 !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
   margin-right: 4px !important;
 }
 
@@ -137,91 +163,114 @@ body,
 .gr-panel,
 .gr-box,
 div[class*="block"] {
-  border-color: #1e293b !important;
-  background-color: #0f172a !important;
+  border-color: var(--border-subtle) !important;
+  background-color: var(--bg-surface) !important;
+  border-radius: 12px !important;
 }
 
-/* Tabs Styling */
+/* Tabs Styling (Render Minimalist Active Violet Border) */
 button[role="tab"] {
   font-weight: 600 !important;
   font-size: 14px !important;
   color: #94a3b8 !important;
   border-bottom: 2px solid transparent !important;
-  padding: 10px 18px !important;
+  padding: 12px 20px !important;
   transition: all 0.2s ease !important;
+  background: transparent !important;
+}
+
+button[role="tab"]:hover {
+  color: #ffffff !important;
 }
 
 button[role="tab"][aria-selected="true"] {
-  color: #38bdf8 !important;
-  border-bottom: 2px solid #38bdf8 !important;
-  background: rgba(56, 189, 248, 0.06) !important;
-  border-radius: 6px 6px 0 0 !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid #a855f7 !important;
+  background: rgba(168, 85, 247, 0.08) !important;
+  border-radius: 8px 8px 0 0 !important;
 }
 
-/* Buttons */
+/* Primary Button (Render High-Contrast Crisp White) */
 button.primary-btn,
 .gr-button-primary {
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
-  border: 1px solid #3b82f6 !important;
-  color: #ffffff !important;
-  font-weight: 600 !important;
+  background: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  color: #050608 !important;
+  font-weight: 700 !important;
   border-radius: 8px !important;
-  transition: all 0.15s ease-in-out !important;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3) !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15) !important;
 }
 
 button.primary-btn:hover,
 .gr-button-primary:hover {
-  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45) !important;
+  background: #f1f5f9 !important;
+  border-color: #f1f5f9 !important;
+  color: #000000 !important;
+  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-1px) !important;
 }
 
-button.success-btn {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
-  border: 1px solid #10b981 !important;
+/* Secondary Button (Render Glassmorphic Ghost Button) */
+button.secondary-btn,
+.gr-button-secondary {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #f8fafc !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+button.secondary-btn:hover,
+.gr-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(168, 85, 247, 0.45) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3) !important;
+  transform: translateY(-1px) !important;
 }
 
-/* Dataframe & Table */
+/* Dataframe & Table (Render Dark Terminal Grid) */
 .dataframe-wrap {
-  border-radius: 10px !important;
-  border: 1px solid #1e293b !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--border-subtle) !important;
   overflow: hidden !important;
+  background: #090a10 !important;
 }
 
 table.dataframe th {
-  background: #111827 !important;
+  background: #0e111a !important;
   color: #94a3b8 !important;
   font-weight: 700 !important;
   font-size: 12px !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
-  padding: 12px 14px !important;
-  border-bottom: 2px solid #1e293b !important;
+  padding: 12px 16px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 table.dataframe td {
-  padding: 10px 14px !important;
+  padding: 10px 16px !important;
   font-size: 13px !important;
   color: #f1f5f9 !important;
-  border-bottom: 1px solid #1e293b !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
 }
 
 table.dataframe tr:hover td {
-  background: rgba(56, 189, 248, 0.05) !important;
+  background: rgba(168, 85, 247, 0.08) !important;
   cursor: pointer !important;
 }
 
-/* Terminal Status Box */
+/* Terminal Status Box (Render Code Runner Console) */
 .terminal-status {
-  background: #020617 !important;
-  border: 1px solid #1e293b !important;
+  background: #08090f !important;
+  border: 1px solid #1c2132 !important;
   border-radius: 8px !important;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
-  color: #38bdf8 !important;
+  color: #c084fc !important;
   font-size: 12px !important;
   padding: 12px 16px !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Scrollbars */
@@ -231,48 +280,48 @@ table.dataframe tr:hover td {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0b0f19;
+  background: #07080b;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #1e2436;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #333c56;
 }
 
-/* TradingView Style Area Chart & Header Banner */
+/* TradingView / Deep-Dive Area Chart Card */
 .tv-header-card {
-  background: #080c14 !important;
-  border: 1px solid #1e293b !important;
-  border-radius: 12px !important;
-  padding: 16px 20px !important;
-  margin-bottom: 12px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
+  background: linear-gradient(180deg, #0d0f18 0%, #08090f 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  padding: 18px 24px !important;
+  margin-bottom: 14px !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5) !important;
 }
 
 .tv-logo-circle {
-  width: 42px !important;
-  height: 42px !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 50% !important;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
-  border: 1px solid #334155 !important;
-  color: #38bdf8 !important;
+  background: linear-gradient(135deg, #7c3aed 0%, #4338ca 100%) !important;
+  border: 1px solid rgba(168, 85, 247, 0.5) !important;
+  color: #ffffff !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   font-weight: 800 !important;
   font-size: 15px !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.4) !important;
 }
 
 .tv-price-large {
-  font-size: 32px !important;
+  font-size: 34px !important;
   font-weight: 800 !important;
-  letter-spacing: -0.02em !important;
-  color: #f8fafc !important;
+  letter-spacing: -0.03em !important;
+  color: #ffffff !important;
 }
 
 .tv-change-badge {
@@ -286,24 +335,26 @@ table.dataframe tr:hover td {
 }
 
 .tv-change-badge.pill-positive {
-  background: rgba(0, 192, 118, 0.15) !important;
-  color: #00c076 !important;
-  border: 1px solid rgba(0, 192, 118, 0.3) !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.15) !important;
 }
 
 .tv-change-badge.pill-negative {
   background: rgba(244, 63, 94, 0.15) !important;
-  color: #f43f5e !important;
-  border: 1px solid rgba(244, 63, 94, 0.3) !important;
+  color: #fb7185 !important;
+  border: 1px solid rgba(244, 63, 94, 0.35) !important;
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.15) !important;
 }
 
 .tv-stats-ribbon {
   display: flex !important;
   gap: 24px !important;
   flex-wrap: wrap !important;
-  border-top: 1px solid #161f30 !important;
-  padding-top: 12px !important;
-  margin-top: 10px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  padding-top: 14px !important;
+  margin-top: 12px !important;
 }
 
 .tv-stat-item {
@@ -314,14 +365,14 @@ table.dataframe tr:hover td {
 
 .tv-stat-lbl {
   font-size: 11px !important;
-  color: #64748b !important;
+  color: #94a3b8 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
+  letter-spacing: 0.06em !important;
   font-weight: 600 !important;
 }
 
 .tv-stat-val {
   font-size: 12px !important;
   font-weight: 700 !important;
-  color: #cbd5e1 !important;
+  color: #f1f5f9 !important;
 }

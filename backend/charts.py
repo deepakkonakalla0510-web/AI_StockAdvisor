@@ -210,8 +210,8 @@ def create_stock_analysis_figure(
     # Global Aesthetic Styling
     fig.update_layout(
         template="plotly_dark",
-        paper_bgcolor="#0b0f19",   # Rich midnight slate
-        plot_bgcolor="#111827",    # Slate 900
+        paper_bgcolor="#06070a",   # Render obsidian deep dark
+        plot_bgcolor="#0b0d15",    # Subtle elevated dark surface
         margin=dict(l=55, r=40, t=55, b=40),
         height=720,
         hovermode="x unified",
@@ -223,16 +223,16 @@ def create_stock_analysis_figure(
             x=1,
             font=dict(size=11, color="#cbd5e1")
         ),
-        xaxis=dict(gridcolor="#1e293b", rangeslider=dict(visible=False)),
-        xaxis2=dict(gridcolor="#1e293b") if rows >= 2 else dict(),
-        xaxis3=dict(gridcolor="#1e293b") if rows >= 3 else dict(),
+        xaxis=dict(gridcolor="#161925", rangeslider=dict(visible=False)),
+        xaxis2=dict(gridcolor="#161925") if rows >= 2 else dict(),
+        xaxis3=dict(gridcolor="#161925") if rows >= 3 else dict(),
     )
 
-    fig.update_yaxes(title_text="Price (₹)", row=1, col=1, gridcolor="#1e293b", title_font=dict(size=12, color="#94a3b8"))
+    fig.update_yaxes(title_text="Price (₹)", row=1, col=1, gridcolor="#161925", title_font=dict(size=12, color="#94a3b8"))
     if vol_row is not None:
-        fig.update_yaxes(title_text="Vol", row=vol_row, col=1, gridcolor="#1e293b", title_font=dict(size=11, color="#94a3b8"))
+        fig.update_yaxes(title_text="Vol", row=vol_row, col=1, gridcolor="#161925", title_font=dict(size=11, color="#94a3b8"))
     if rsi_row is not None:
-        fig.update_yaxes(title_text="RSI", row=rsi_row, col=1, range=[0, 100], gridcolor="#1e293b", title_font=dict(size=11, color="#94a3b8"))
+        fig.update_yaxes(title_text="RSI", row=rsi_row, col=1, range=[0, 100], gridcolor="#161925", title_font=dict(size=11, color="#94a3b8"))
 
     return fig
 
@@ -328,41 +328,41 @@ def create_tradingview_area_chart(
         )
     )
 
-    # Style exactly like TradingView screenshot
+    # Style exactly like Render / TradingView aesthetic
     fig.update_layout(
         template="plotly_dark",
-        paper_bgcolor="#080c14",   # Deepest dark canvas
-        plot_bgcolor="#080c14",
+        paper_bgcolor="#08090f",   # Render obsidian canvas
+        plot_bgcolor="#08090f",
         margin=dict(l=20, r=65, t=15, b=30),
         height=480,
         hovermode="x unified",
         showlegend=False
     )
 
-    # X-Axis with clean subtle grid & crosshair
+    # X-Axis with clean subtle grid & purple crosshair spike
     fig.update_xaxes(
         showgrid=True,
-        gridcolor="#161f30",
+        gridcolor="#161925",
         gridwidth=1,
         showspikes=True,
         spikemode="across",
         spikesnap="cursor",
-        spikecolor="#64748b",
+        spikecolor="#a855f7",
         spikethickness=1,
         spikedash="dot",
         tickfont=dict(size=11, color="#64748b")
     )
 
-    # Y-Axis on RIGHT side (just like TradingView) with currency format
+    # Y-Axis on RIGHT side with currency format and purple crosshair
     fig.update_yaxes(
         side="right",
         showgrid=True,
-        gridcolor="#161f30",
+        gridcolor="#161925",
         gridwidth=1,
         showspikes=True,
         spikemode="across",
         spikesnap="cursor",
-        spikecolor="#64748b",
+        spikecolor="#a855f7",
         spikethickness=1,
         spikedash="dot",
         tickprefix="₹",
